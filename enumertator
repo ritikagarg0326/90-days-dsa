@@ -1,0 +1,6 @@
+s = '123456789'
+mem = [int(s[j: j+i]) for i in range(2, 10) for j in range(9) if j + i < 10]
+
+class Solution:
+    def sequentialDigits(self, low: int, high: int) -> List[int]:
+        return [x for x in mem if low <= x <= high]
